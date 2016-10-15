@@ -8,11 +8,15 @@ function takeANumber(katzDeliLine, name) {
 
 function nowServing(katzDeliLine) {
   var nextPerson = null;
+  // below conditional can be written as
+  // ( !katzDeliLine.length )
   if (katzDeliLine.length === 0) {
     return "There is nobody waiting to be served!";
   } else {
-     nextPerson = katzDeliLine.shift();
-     return `Currently serving ${nextPerson}.`;
+    // below in one line
+    // return `text ${katzDeliLine.shift()}`
+    nextPerson = katzDeliLine.shift();
+    return `Currently serving ${nextPerson}.`;
   }
 }
 
